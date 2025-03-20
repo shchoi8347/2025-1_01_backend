@@ -15,4 +15,5 @@ public interface TodoRepository extends JpaRepository<TodoEntity, String> {
     @Query(value="select * from Todo t where t.userId = ?1")
     List<TodoEntity> findByUserId(String userId);
     List<TodoEntity> findByUserIdAndTitle(String userId, String title);
+    List<TodoEntity> findByTitle(String title);
 }
